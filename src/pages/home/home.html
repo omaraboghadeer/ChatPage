@@ -1,14 +1,77 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-header >
+  <ion-navbar color="pink-Color">
+    <div class="bar">
+      <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="back-arrow"></ion-icon>
+      <ion-title class="title">
+        Chat
+      </ion-title>
+      <ion-icon ios="ios-search" md="md-search" class="search"></ion-icon>
+    </div>
+  </ion-navbar>  
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+    <ion-item no-lines text-center>
+      <ion-thumbnail item-start>
+        <img src="assets/23.jpg" width="45px">
+      </ion-thumbnail>
+      <h2>Noha Mohammed Ahmed</h2>
+    </ion-item>
+
+    <ion-grid class="chat-screen">
+        
+        <ion-row>
+          <ion-col col-9>
+            <div>
+              <p>Hello Dr. Noha.. how are your ?? i need to talk to you in a problem i have and it's urgent!</p>
+            </div>
+               
+          </ion-col>
+          <ion-col col-2>
+            <ion-avatar item-left>
+                <img src="assets/2.jpg" width="45px" >
+            </ion-avatar>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2>
+                <ion-avatar item-right>
+                    <img src="assets/23.jpg" width="45px">
+                </ion-avatar>
+            </ion-col>
+            <ion-col col-8>
+              <div>
+                <p>Hi Dear .. yes sure tell me what do you face and it's my pleasure to help you</p>
+              </div>
+                
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-9>
+              <div>
+                <p>Dr. Noha ... i've a main problem in my life and i've been facing it along time ago .. and i really need help .. it started 4 years ago...</p>
+              </div>   
+            </ion-col>
+            <ion-col col-2>
+              <ion-avatar item-left>
+                  <img src="assets/2.jpg" width="45px" >
+              </ion-avatar>
+            </ion-col>
+          </ion-row>
+
+      </ion-grid>
+    
+  <ion-toolbar class="typing">
+    <ion-row>
+      <ion-col col-9>
+        <ion-textarea [(ngModel)]="content" placeholder="type something.."></ion-textarea>
+      </ion-col>
+      <ion-col col-3>
+        <img src="assets/SendIcon.png" class="sending" width="35px" float-right (click)="send()" >
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>  
 </ion-content>
+
+

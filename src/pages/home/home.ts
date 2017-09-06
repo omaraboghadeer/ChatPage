@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  @Output() sendMessage: EventEmitter<string>
 
+  content: string;
+
+  constructor() {
+    this.sendMessage = new EventEmitter<string>();
   }
 
+  send() {
+    this.sendMessage.emit(this.content);
+    this.content = "";
+  }
 }
